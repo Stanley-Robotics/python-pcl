@@ -68,6 +68,8 @@ for flag in pkgconfig('--libs-only-other'):
 ext_args['define_macros'].append(
     ("EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET", "1"))
 
+ext_args['extra_compile_args'].append('-std=c++11')
+#ext_args['extra_compile_args'].append('-O0')
 setup(name='python-pcl',
       description='pcl wrapper',
       url='http://github.com/strawlab/python-pcl',
